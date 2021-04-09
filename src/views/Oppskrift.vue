@@ -206,7 +206,8 @@ export default {
   }
   .oppskrift-img {
     height: fit-content;
-    min-width: 320px;
+    min-width: 280px;
+    max-width: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -293,7 +294,7 @@ export default {
   .left-arrow {
     height: 100%;
     width: 50px;
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent;
     position: absolute;
     left: 2%;
     top: 0;
@@ -305,7 +306,7 @@ export default {
   .right-arrow {
     height: 100%;
     width: 50px;
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent;
     position: absolute;
     right: 2%;
     top: 0;

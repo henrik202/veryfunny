@@ -403,7 +403,7 @@ svg rect {
     width: 50px;
     background: transparent;
     position: absolute;
-    left: 2%;
+    left: 7%;
     top: 0;
     z-index: 500;
     display: flex;
@@ -415,7 +415,7 @@ svg rect {
     width: 50px;
     background: transparent;
     position: absolute;
-    right: 2%;
+    right: 7%;
     top: 0;
     z-index: 500;
     display: flex;
@@ -588,6 +588,7 @@ svg rect {
       letter-spacing: 0.9px;
       font-size: 2em;
       text-align: center;
+      white-space: nowrap;
     }
     a {
       color: black;

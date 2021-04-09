@@ -66,6 +66,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.show {
+}
 .header-wrapper {
   height: 90px;
   width: 100%;

@@ -2,7 +2,7 @@
   <div class="about">
     <div class="about-header">
       <h1>En fremtidsrettet</h1>
-      <h2><span>fiskeri</span> <span>bedrift</span></h2>
+      <h2><span>Sjømat</span> <span>produsent</span></h2>
     </div>
 
     <section>
@@ -120,7 +120,7 @@ export default {
   width: 100%;
 }
 .about-header {
-  height: 200px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,7 +131,7 @@ export default {
   background: rgba(200, 200, 200, 0.15);
 
   h1 {
-    font-size: 4em;
+    font-size: 3.5em;
     letter-spacing: 1px;
     font-weight: 300;
   }
@@ -196,7 +196,7 @@ section {
 
     p {
       font-size: 12em;
-      color: rgba(82, 75, 75, 0.144);
+      color: rgba(122, 122, 122, 0.075);
     }
   }
 }
@@ -204,7 +204,7 @@ section {
   content: "";
   position: absolute;
   width: 3px;
-  background: rgba(0, 0, 0, 0.13);
+  background: rgba(122, 122, 122, 0.075);
   top: 0;
   bottom: 0;
   left: 50%;
