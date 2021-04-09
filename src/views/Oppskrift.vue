@@ -69,13 +69,13 @@
         <b-icon
           icon="arrow-left-circle-fill"
           aria-hidden="true"
-          style="height: 50px; width: 50px"
+          style="height: 50px; width: 50px; color: white"
         ></b-icon>
       </div>
       <div class="right-arrow" @click="moveRight">
         <b-icon
           icon="arrow-right-circle-fill"
-          style="height: 50px; width: 50px"
+          style="height: 50px; width: 50px; color: white"
           aria-hidden="true"
         ></b-icon>
       </div>

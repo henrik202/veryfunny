@@ -33,7 +33,7 @@
         <p>{{ info.oppbevaring }}</p>
       </div>
       <div class="produkt-beskrivelse">
-        <h6>Næringsinnhold per 100g</h6>
+        <h6 id="ninnhold">Næringsinnhold per 100g</h6>
         <table id="tabell">
           <tbody>
             <tr>
@@ -225,5 +225,10 @@ table {
   flex: 1 1 10%;
 
   justify-content: center;
+}
+
+#ninnhold {
+  text-align: center;
+  white-space: nowrap;
 }
 </style>
