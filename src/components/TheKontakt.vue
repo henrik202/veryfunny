@@ -56,6 +56,8 @@ export default {
   padding: 0 50px;
   align-items: center;
   justify-content: center;
+  position: relative;
+  bottom: 0;
 }
 
 .footer-logo-container {

@@ -1,67 +1,69 @@
 <template>
-  <div class="spesial-container">
-    <div class="spesial-header">
-      <h2>Superior hvalbiff</h2>
-    </div>
+  <div class="black-box">
+    <div class="spesial-container">
+      <div class="spesial-header">
+        <h2>Superior hvalbiff</h2>
+      </div>
 
-    <section class="spesial-banner">
-      <div class="banner-overlay"></div>
-    </section>
-    <div class="banner-below">
-      <div class="spesial-description">
-        <h3>Superior Hvalbiff</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-          perferendis nesciunt placeat amet natus, aspernatur cum fugiat non
-          repudiandae dolorum ex ullam optio qui quod ut quaerat vero eos ab.
-        </p>
+      <section class="spesial-banner">
+        <div class="banner-overlay"></div>
+      </section>
+      <div class="banner-below">
+        <div class="spesial-description">
+          <h3>Superior Hvalbiff</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            perferendis nesciunt placeat amet natus, aspernatur cum fugiat non
+            repudiandae dolorum ex ullam optio qui quod ut quaerat vero eos ab.
+          </p>
 
-        <div class="produkt-beskrivelse">
-          <h6>Næringsinnhold per 100g</h6>
-          <table id="tabell">
-            <tbody>
-              <tr>
-                <td>Energi (kJ)</td>
-                <td class="right-text">100 kJ</td>
-              </tr>
-              <tr>
-                <td>Energi (kcal)</td>
-                <td class="right-text">200 kcal</td>
-              </tr>
-              <tr>
-                <td>Fett</td>
-                <td class="right-text">10 g</td>
-              </tr>
-              <tr>
-                <td>-Mettet fett</td>
-                <td class="right-text">5 g</td>
-              </tr>
-              <tr>
-                <td>-Enumettet fett</td>
-                <td class="right-text">50 g</td>
-              </tr>
-              <tr>
-                <td>-Flerumettet fett</td>
-                <td class="right-text">15 g</td>
-              </tr>
-              <tr>
-                <td>Karbohydrater</td>
-                <td class="right-text">0 g</td>
-              </tr>
-              <tr>
-                <td>Sukker</td>
-                <td class="right-text">0 g</td>
-              </tr>
-              <tr>
-                <td>Protein</td>
-                <td class="right-text">20 g</td>
-              </tr>
-              <tr>
-                <td>Salt</td>
-                <td class="right-text">0.05 g</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="produkt-beskrivelse">
+            <h6>Næringsinnhold per 100g</h6>
+            <table id="tabell">
+              <tbody>
+                <tr>
+                  <td>Energi (kJ)</td>
+                  <td class="right-text">100 kJ</td>
+                </tr>
+                <tr>
+                  <td>Energi (kcal)</td>
+                  <td class="right-text">200 kcal</td>
+                </tr>
+                <tr>
+                  <td>Fett</td>
+                  <td class="right-text">10 g</td>
+                </tr>
+                <tr>
+                  <td>-Mettet fett</td>
+                  <td class="right-text">5 g</td>
+                </tr>
+                <tr>
+                  <td>-Enumettet fett</td>
+                  <td class="right-text">50 g</td>
+                </tr>
+                <tr>
+                  <td>-Flerumettet fett</td>
+                  <td class="right-text">15 g</td>
+                </tr>
+                <tr>
+                  <td>Karbohydrater</td>
+                  <td class="right-text">0 g</td>
+                </tr>
+                <tr>
+                  <td>Sukker</td>
+                  <td class="right-text">0 g</td>
+                </tr>
+                <tr>
+                  <td>Protein</td>
+                  <td class="right-text">20 g</td>
+                </tr>
+                <tr>
+                  <td>Salt</td>
+                  <td class="right-text">0.05 g</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -69,18 +71,26 @@
 </template>
 
 <script>
-export default {
-  mounted() {
-    window.scrollTo(0, 0);
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
+.black-box {
+  background: black;
+  height: 100vh;
+  width: 100%;
+}
 .spesial-container {
   width: 100%;
   height: 100%;
   background: black;
+  background-image: url("~@/assets/pexels-valeria-boltneva-1639562.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  scrollbar-width: none;
+  overflow-y: scroll;
 
   .spesial-header {
     height: 200px;
@@ -101,13 +111,8 @@ export default {
 
   .spesial-banner {
     width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    background-image: url("~@/assets/pexels-valeria-boltneva-1639562.jpg");
+    background: transparent;
     height: 500px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     position: relative;
 
     .banner-overlay {

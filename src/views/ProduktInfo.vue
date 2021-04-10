@@ -111,10 +111,6 @@ export default {
     },
   },
 
-  mounted() {
-    window.scrollTo(0, 0);
-  },
-
   computed: {
     produkt() {
       return store.produkter.find((produkt) => produkt.slug === this.slug);

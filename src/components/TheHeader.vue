@@ -28,14 +28,14 @@
           <b-dropdown-item
             :to="{ name: 'Oppskrifter' }"
             href="#"
-            style="height: fit-content; width: 500px; font-size: 1.5em"
+            style="width: 500px; font-size: 1.5em; height: 75px"
             >Oppskrifter</b-dropdown-item
           >
           <b-dropdown-item
             :to="{ name: 'Hvalfangst' }"
             href="#"
             style="
-              height: fit-content;
+              height: 75px;
               width: 500px;
               font-size: 1.5em;
               margin-top: 20px;
@@ -46,7 +46,7 @@
             :to="{ name: 'About' }"
             href="#"
             style="
-              height: fit-content;
+              height: 75px;
               width: 500px;
               font-size: 1.5em;
               margin-top: 20px;
@@ -103,7 +103,7 @@ export default {
 
   img {
     height: 30px;
-    width: 160px;
+    width: 100%;
   }
 }
 .nav-links {
@@ -144,6 +144,8 @@ export default {
 }
 @media only screen and (max-width: 460px) {
   #lfw-logo {
+    width: 100%;
+    height: 30px;
   }
 }
 @media only screen and (min-width: 980px) {

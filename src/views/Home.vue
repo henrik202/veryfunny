@@ -1,193 +1,225 @@
 <template>
-  <div v-once>
-    <section id="hero-section" class="hero-section">
-      <div class="arktis-container">
-        <div class="arktis-text">
-          <h1>Barents</h1>
-          <span>Vår nye hvalburger</span>
-          <a href="#">Finn i butikk</a>
-        </div>
-      </div>
-    </section>
-    <section class="hero-section-2">
-      <div class="above1760">
-        <!--whitespace-->
-      </div>
-      <div class="svg-box">
-        <!--samme løsningen som med img-box, wrapper-->
-        <svg viewBox="0 0 auto 200">
-          <!--this value has to be the same as svg-box height (the svg box is set to pixels)-->
+  <div>
+    <main class="hero-section">
+      <div class="background-banner"></div>
 
-          <defs>
-            <mask id="mask" x="0" y="0" height="100%" width="100%">
-              <rect x="0" y="0" height="100%" width="100vw" />
-              <text
-                x="50%"
-                y="50%"
-                fill="black"
-                text-anchor="middle"
-                fill-opacity="1"
-              >
-                Lofothval
-              </text>
-            </mask>
-          </defs>
-          <rect x="0" y="0" height="100%" width="100vw" />
-        </svg>
-      </div>
-      <div class="belowlofothval">
-        <div class="belowlofothvaltext">
-          <h2>Ren tradisjon</h2>
+      <section class="hero-section-overlap">
+        <div class="above1760">
+          <!--whitespace-->
         </div>
-      </div>
-      <div class="whitespacediv-three">
-        <!--whitespace-->
-      </div>
+        <div class="svg-box">
+          <!--samme løsningen som med img-box, wrapper-->
+          <svg viewBox="0 0 auto 200">
+            <!--this value has to be the same as svg-box height (the svg box is set to pixels)-->
 
-      <div class="below1760">
-        <div class="below1760text">
-          <h3>Våre produkter</h3>
+            <defs>
+              <mask id="mask" x="0" y="0" height="100%" width="100%">
+                <rect x="0" y="0" height="100%" width="100%" />
+                <text
+                  x="50%"
+                  y="50%"
+                  fill="black"
+                  text-anchor="middle"
+                  fill-opacity="1"
+                >
+                  Lofothval
+                </text>
+              </mask>
+            </defs>
+            <rect x="0" y="0" height="100%" width="100%" />
+          </svg>
         </div>
-      </div>
-      <div class="ourcreations">
-        <div class="left-arrow" @click="moveLeft">
-          <b-icon
-            icon="arrow-left-circle-fill"
-            aria-hidden="true"
-            style="height: 50px; width: 50px; color: white"
-          ></b-icon>
+        <div class="belowlofothval">
+          <div class="belowlofothvaltext">
+            <h2>Ren tradisjon</h2>
+          </div>
         </div>
-        <div class="right-arrow" @click="moveRight">
-          <b-icon
-            icon="arrow-right-circle-fill"
-            style="height: 50px; width: 50px; color: white"
-            aria-hidden="true"
-          ></b-icon>
+        <div class="whitespacediv-three">
+          <!--whitespace-->
         </div>
-        <div class="creations-wrapper" ref="prod">
-          <!--flex container-->
-          <router-link
-            :to="{ name: 'ProduktInfo', params: { slug: produkt.slug } }"
-            v-for="produkt in produkter"
-            :key="produkt.name"
-          >
-            <img
-              :src="require(`@/assets/${produkt.image}`)"
-              alt="lettrøkt hvalkjøtt"
-            />
-            <span>{{ produkt.name }}</span>
-          </router-link>
-        </div>
-      </div>
 
-      <div class="her-collection">
-        <div class="collections-wrapper">
+        <div class="below1760">
+          <div class="below1760text">
+            <h3>Våre produkter</h3>
+          </div>
+        </div>
+        <div class="ourcreations">
+          <div class="left-arrow" @click="moveLeft">
+            <b-icon
+              icon="arrow-left-circle-fill"
+              aria-hidden="true"
+              style="height: 50px; width: 50px; color: white"
+            ></b-icon>
+          </div>
+          <div class="right-arrow" @click="moveRight">
+            <b-icon
+              icon="arrow-right-circle-fill"
+              style="height: 50px; width: 50px; color: white"
+              aria-hidden="true"
+            ></b-icon>
+          </div>
+          <div class="creations-wrapper" ref="prod">
+            <!--flex container-->
+            <router-link
+              :to="{ name: 'ProduktInfo', params: { slug: produkt.slug } }"
+              v-for="produkt in produkter"
+              :key="produkt.name"
+            >
+              <img
+                :src="require(`@/assets/${produkt.image}`)"
+                alt="lettrøkt hvalkjøtt"
+              />
+              <span>{{ produkt.name }}</span>
+            </router-link>
+          </div>
+        </div>
+
+        <div class="her-collection">
+          <div class="collections-wrapper">
+            <!--grid container-->
+            <router-link
+              v-for="spesialitet in spesial"
+              :key="spesialitet.name"
+              :to="{ name: 'Spesial', params: { slug: spesialitet.slug } }"
+            >
+              <img
+                :src="require(`@/assets/${spesialitet.image}`)"
+                alt="lettrøkt hvalkjøtt"
+              />
+            </router-link>
+            <div class="collections-text-header">
+              <h1>Superior hvalbiff</h1>
+              <p>
+                Utforsk det ypperste og mest ettertraktede produktet innen
+                nordisk tradisjonsfiske
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="oppskrifter">
+          <div class="whitebox">
+            <div class="oppskrifter-text">
+              <h6>Ekstraordinær råvare</h6>
+              <span>Oppskrifter & inspirasjon</span>
+              <router-link to="/oppskrifter">Klikk her</router-link>
+            </div>
+          </div>
+        </div>
+        <div class="whitespacediv"></div>
+
+        <div class="parallax">
+          <!--this has pos relatve, background-img pos fixed etc...-->
+          <div class="overlaydark">
+            <div class="overlaytext">
+              <!--this has pos absolute-->
+              <span id="span1overlay">Mesterlig håndtverk</span>
+              <span id="span2overlay">Se hvordan vi gjør det</span>
+              <router-link :to="{ name: 'Handmade' }">Klikk her</router-link>
+            </div>
+          </div>
+        </div>
+
+        <div class="below-restaurant">
+          <div class="below-restaurant-text">
+            <p>Våre verdier</p>
+          </div>
+        </div>
+
+        <div class="benefits-cards">
           <!--grid container-->
-          <router-link
-            v-for="spesialitet in spesial"
-            :key="spesialitet.name"
-            :to="{ name: 'Spesial', params: { slug: spesialitet.slug } }"
-          >
-            <img
-              :src="require(`@/assets/${spesialitet.image}`)"
-              alt="lettrøkt hvalkjøtt"
-            />
-          </router-link>
-          <div class="collections-text-header">
-            <h1>Superior hvalbiff</h1>
+          <div class="benefits-cards-wrapper1">
+            <!--flex container-->
+            <a href="#">
+              <img src="@/assets/640x427-minke-whale.png" alt="minke hval" />
+            </a>
+            <h1>Etisk ansvar</h1>
             <p>
-              Utforsk det ypperste og mest ettertraktede produktet innen nordisk
-              tradisjonsfiske
+              Forvaltningen av hvalfangst er basert på vitenskapelige råd, og
+              underlagt strengt kontroll- og utøvelsesregelverk, både nasjonalt
+              og internasjonalt. Les mer om våre etiske forpliktelser her.
             </p>
+            <div class="les-mer1">
+              <a href="#">Les mer</a>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="oppskrifter">
-        <div class="whitebox">
-          <div class="oppskrifter-text">
-            <h6>Ekstraordinær råvare</h6>
-            <span>Oppskrifter & inspirasjon</span>
-            <router-link to="/oppskrifter">Klikk her</router-link>
+          <div class="benefits-cards-wrapper1">
+            <!--flex container-->
+            <a href="#">
+              <img src="@/assets/gun.png" alt="sirkulær økonomi" />
+            </a>
+            <h1>Bærekraft</h1>
+            <p>
+              Bærekraftig mat er mat som inngår i bærekraftige produksjoner og
+              som fraktes via miljøvennlig transport. "Dette strekker vi oss
+              langt etter." Les mer om våre bærekraftmål her.
+            </p>
+            <div class="les-mer1">
+              <a href="#">Les mer</a>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="whitespacediv"></div>
 
-      <div class="parallax">
-        <!--this has pos relatve, background-img pos fixed etc...-->
-        <div class="overlaydark">
-          <div class="overlaytext">
-            <!--this has pos absolute-->
-            <span id="span1overlay">Mesterlig håndtverk</span>
-            <span id="span2overlay">Se hvordan vi gjør det</span>
-            <router-link :to="{ name: 'Handmade' }">Klikk her</router-link>
-          </div>
-        </div>
-      </div>
-
-      <div class="below-restaurant">
-        <div class="below-restaurant-text">
-          <p>Våre verdier</p>
-        </div>
-      </div>
-
-      <div class="benefits-cards">
-        <!--grid container-->
-        <div class="benefits-cards-wrapper1">
-          <!--flex container-->
-          <a href="#">
-            <img src="@/assets/640x427-minke-whale.png" alt="minke hval" />
-          </a>
-          <h1>Etisk ansvar</h1>
-          <p>
-            Forvaltningen av hvalfangst er basert på vitenskapelige råd, og
-            underlagt strengt kontroll- og utøvelsesregelverk, både nasjonalt og
-            internasjonalt. Les mer om våre etiske forpliktelser her.
-          </p>
-          <div class="les-mer1">
-            <a href="#">Les mer</a>
+          <div class="benefits-cards-wrapper1">
+            <!--flex container-->
+            <a href="#">
+              <img
+                src="@/assets/2c045c01-a714-41a0-939f-af81cbe8bc3b.jpg"
+                alt="helsegevinst"
+              />
+            </a>
+            <h1>Helsegevinst</h1>
+            <p>
+              Hvalkjøtt inneholder nemlig næringsstoffer som: Omega 3 med de
+              helseriktige stoffene DPA og EPA. Jern, Vitamin A,Vitamin D.
+              Vitaminer fra B-gruppen som B6 og B12.
+            </p>
+            <div class="les-mer1">
+              <a href="#">Les mer</a>
+            </div>
           </div>
         </div>
 
-        <div class="benefits-cards-wrapper1">
-          <!--flex container-->
-          <a href="#">
-            <img src="@/assets/gun.png" alt="sirkulær økonomi" />
-          </a>
-          <h1>Bærekraft</h1>
-          <p>
-            Bærekraftig mat er mat som inngår i bærekraftige produksjoner og som
-            fraktes via miljøvennlig transport. "Dette strekker vi oss langt
-            etter." Les mer om våre bærekraftmål her.
-          </p>
-          <div class="les-mer1">
-            <a href="#">Les mer</a>
-          </div>
-        </div>
+        <div class="whitespacediv-three"></div>
+        <footer class="kontakt-info-felt">
+          <!--grid container-->
 
-        <div class="benefits-cards-wrapper1">
-          <!--flex container-->
-          <a href="#">
-            <img
-              src="@/assets/2c045c01-a714-41a0-939f-af81cbe8bc3b.jpg"
-              alt="helsegevinst"
-            />
-          </a>
-          <h1>Helsegevinst</h1>
-          <p>
-            Hvalkjøtt inneholder nemlig næringsstoffer som: Omega 3 med de
-            helseriktige stoffene DPA og EPA. Jern, Vitamin A,Vitamin D.
-            Vitaminer fra B-gruppen som B6 og B12.
-          </p>
-          <div class="les-mer1">
-            <a href="#">Les mer</a>
+          <div class="footer-logo-container">
+            <div class="footer-logo-flexbox">
+              <div class="logobox"></div>
+              <span>Hvalprodukter</span>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="whitespacediv-three"></div>
-    </section>
+          <div class="kontakt-info-container">
+            <div class="kontakt-info-flexbox">
+              <span>Lofothval AS</span>
+              <span>8390 Reine</span>
+              <span>Norway</span>
+              <span>Email:</span>
+              <span>tel:</span>
+            </div>
+          </div>
+
+          <div class="follow-us-container">
+            <div class="follow-us-flexbox">
+              <span>Følg oss på:</span>
+              <div class="sns-flexbox">
+                <a href="#">
+                  <img src="@/assets/sns1_1.png" alt="instagram icon" />
+                </a>
+                <a href="#">
+                  <img src="@/assets/sns1_2.png" alt="twitter icon" />
+                </a>
+                <a href="#">
+                  <img src="@/assets/sns1_3.png" alt="vimeo icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </main>
   </div>
 </template>
 
@@ -215,59 +247,28 @@ export default {
 
 <style lang="scss" scoped>
 .hero-section {
-  height: 100vh;
   width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1002;
-  opacity: 1;
+  background: rgba(0, 0, 0, 0.95);
   background-image: url("~@/assets/pexels-valeria-boltneva-1639562.jpg");
+  height: calc(100vh - 90px);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+  scrollbar-width: none;
 
-  .arktis-container {
-    height: 100%;
-    width: 280px;
-    display: flex;
+  .background-banner {
     position: absolute;
-    top: 100px;
-    left: 9.58333333333333%;
-    background: transparent;
-    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.295);
 
-    .arktis-text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      height: 500px;
-      width: 100%;
+    display: flex;
 
-      h1 {
-        font-size: 4em;
-        color: white;
-        font-weight: 200;
-      }
-
-      span {
-        font-size: 1.5em;
-        color: white;
-      }
-      a {
-        text-decoration: none;
-        font-size: 1.5em;
-        color: white;
-        border: 3px solid rgb(255, 255, 255);
-        padding: 10px;
-        margin-top: 30px;
-      }
-      a:hover {
-        background: black;
-        color: white;
-        transition: all 0.5s;
-      }
+    .banner-text {
+      color: white;
+      height: 100%;
     }
   }
 }
@@ -354,7 +355,7 @@ svg rect {
   right: 0;
 }
 
-.hero-section-2 {
+.hero-section-overlap {
   height: fit-content;
   width: 100%;
   margin-top: 0;
@@ -363,9 +364,6 @@ svg rect {
   position: absolute;
   top: 100%;
   left: 0;
-  //background: transparent;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .below1760text {
@@ -455,7 +453,7 @@ svg rect {
     text-transform: uppercase;
     color: black;
 
-    min-width: 220px;
+    min-width: 320px;
     flex: 0 1 25%;
   }
 
@@ -825,6 +823,112 @@ svg rect {
   background: rgb(0, 0, 0);
   color: white;
   transition: all 0.5s;
+}
+
+.kontakt-info-felt {
+  height: 100%;
+  width: 100%;
+  background: rgb(199, 199, 199);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0 50px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+}
+
+.footer-logo-container {
+  font-family: montserrat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .footer-logo-flexbox {
+    display: flex;
+    width: 150px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    span {
+      font-size: 1.3em;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logobox {
+      background-image: url("~@/assets/Lofothval_sort.png");
+      height: 100px;
+      width: 150px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+}
+
+.kontakt-info-container {
+  width: 100%;
+  height: 150px;
+  font-family: montserrat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .kontakt-info-flexbox {
+    width: 150px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    span {
+      font-size: 1.2em;
+      width: 100px;
+    }
+  }
+}
+
+.follow-us-container {
+  font-family: montserrat;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .follow-us-flexbox {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: 300px;
+    align-items: center;
+
+    span {
+      width: 100%;
+      text-align: center;
+    }
+
+    .sns-flexbox {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 200px;
+
+      a {
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 520px) {
