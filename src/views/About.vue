@@ -18,8 +18,8 @@
       <ul class="history-timeline">
         <div class="watermark-box">
           <p>2006</p>
-          <p>2006</p>
-          <p>2006</p>
+          <p>2010</p>
+          <p>2016</p>
         </div>
         <li class="row-1">
           <div class="content-left">
@@ -237,7 +237,7 @@ section {
 
     p {
       font-size: 12em;
-      color: rgba(41, 30, 30, 0.2);
+      color: rgba(41, 30, 30, 0.4);
     }
   }
 }
@@ -245,7 +245,7 @@ section {
   content: "";
   position: absolute;
   width: 3px;
-  background: rgba(41, 30, 30, 0.2);
+  background: rgba(41, 30, 30, 0.4);
   top: 0;
   bottom: 0;
   left: 50%;

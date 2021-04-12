@@ -1,6 +1,6 @@
 <template>
   <div id="landing-page" v-once>
-    <div id="carousel-container">
+    <!-- <div id="carousel-container">
       <b-carousel
         id="carousel-1"
         v-model="slide"
@@ -27,12 +27,12 @@
           </template>
         </b-carousel-slide>
       </b-carousel>
-    </div>
+    </div> -->
 
     <section class="hero-section-overlap">
-      <div class="above1760">
-        <!--whitespace-->
-      </div>
+      <!-- <div class="above1760">
+
+      </div> -->
       <div class="svg-box">
         <video loop autoplay playsinline preload muted id="video">
           <source src="@/assets/production ID 3765078.mp4" />
@@ -44,19 +44,20 @@
               <text x="50%" y="50%" fill="red" text-anchor="middle">
                 Lofothval
               </text>
+              <br>
+              <text x="50%" y="50%" fill="red" text-anchor="middle" id="trad">
+                Ren tradisjon
+              </text>
             </mask>
           </defs>
           <rect x="0" y="0" height="100%" width="100%" />
         </svg>
       </div>
-      <div class="belowlofothval">
+      <!-- <div class="belowlofothval">
         <div class="belowlofothvaltext">
           <h2>Ren tradisjon</h2>
         </div>
-      </div>
-      <div class="whitespacediv-three">
-        <!--whitespace-->
-      </div>
+      </div> -->
 
       <div class="below1760">
         <div class="below1760text">
@@ -66,14 +67,14 @@
       <div class="ourcreations">
         <div class="left-arrow" @click="moveLeft">
           <b-icon
-            icon="arrow-left-circle-fill"
+            icon="chevron-left"
             aria-hidden="true"
             style="height: 50px; width: 50px; color: white"
           ></b-icon>
         </div>
         <div class="right-arrow" @click="moveRight">
           <b-icon
-            icon="arrow-right-circle-fill"
+            icon="chevron-right"
             style="height: 50px; width: 50px; color: white"
             aria-hidden="true"
           ></b-icon>
@@ -280,6 +281,7 @@ export default {
   height: 100%;
   position: relative;
   width: 100%;
+  background: white;
 }
 
 #carousel-1 {
@@ -301,22 +303,22 @@ export default {
 //SECTION 2
 
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+#trad {
+  transform: translateY(80px);
+  font-size: 0.4em;
+}
 .belowlofothval {
-  height: 50px;
   width: 100%;
-  color: black;
-  margin-top: -4px;
 
   .belowlofothvaltext {
-    //margin-top: 50px;
-    max-height: 150px;
+    height: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     font-family: montserrat;
     white-space: nowrap;
-    line-height: 50px;
     background: white;
 
     h2 {
@@ -333,21 +335,19 @@ export default {
   }
 }
 
-.above1760 {
-  height: 75px;
+/* .above1760 {
+  min-height: 50px;
   background: white;
-  margin-bottom: -1.5px; // det her fjerner streker som kommer av at to elementer ligger helt, men ikke 100% inntil hverandre
   width: 100%;
-}
+} */
 
 .below1760 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
-  //position: relative;
+  height: 100px;
   background: white;
-  margin-top: -4px; //fjerner streken av to elementer som ikke ligger helt inntil hverandre
+  transform: translateY(-10px);
 }
 
 svg {
@@ -359,6 +359,7 @@ svg {
   align-self: center;
   height: 100%;
   width: 100%;
+  transition: all 1s ease;
   transform: 1s font-size;
   position: absolute;
   top: 0;
@@ -376,7 +377,7 @@ svg rect {
   object-fit: cover;
 }
 .svg-box {
-  height: 200px;
+  height: 70vh;
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -430,7 +431,7 @@ svg rect {
     background: transparent;
     position: absolute;
     left: 7%;
-    top: 50%;
+    top: 40%;
     z-index: 500;
     display: flex;
     align-items: center;
@@ -442,7 +443,7 @@ svg rect {
     background: transparent;
     position: absolute;
     right: 7%;
-    top: 50%;
+    top: 40%;
     z-index: 500;
     display: flex;
     align-items: center;

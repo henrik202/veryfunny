@@ -67,14 +67,14 @@
     <div class="produkt-container">
       <div class="left-arrow" @click="moveLeft">
         <b-icon
-          icon="arrow-left-circle-fill"
+          icon="chevron-left"
           aria-hidden="true"
           style="height: 50px; width: 50px; color: white"
         ></b-icon>
       </div>
       <div class="right-arrow" @click="moveRight">
         <b-icon
-          icon="arrow-right-circle-fill"
+          icon="chevron-right"
           style="height: 50px; width: 50px; color: white"
           aria-hidden="true"
         ></b-icon>
