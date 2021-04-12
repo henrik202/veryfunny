@@ -362,11 +362,11 @@ svg rect {
 }
 
 #video {
-  min-height: 100%;
+  height: 70vh;
 
-  min-width: 100%;
+  min-width: 100vw;
 
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 .svg-box {
   min-height: 220px;
@@ -382,7 +382,7 @@ svg rect {
 
 .hero-section-overlap {
   height: fit-content;
-  width: 100%;
+  min-width: 320px;
   margin-top: 0;
   z-index: 1003;
   cursor: initial;
