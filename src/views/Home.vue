@@ -366,7 +366,7 @@ svg rect {
 
   min-width: 100vw;
 
-  /* object-fit: cover; */
+  object-fit: cover;
 }
 .svg-box {
   min-height: 220px;
