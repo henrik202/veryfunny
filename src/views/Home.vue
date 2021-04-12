@@ -53,11 +53,6 @@
           <rect x="0" y="0" height="100%" width="100%" />
         </svg>
       </div>
-      <!-- <div class="belowlofothval">
-        <div class="belowlofothvaltext">
-          <h2>Ren tradisjon</h2>
-        </div>
-      </div> -->
 
       <div class="below1760">
         <div class="below1760text">
@@ -335,17 +330,12 @@ export default {
   }
 }
 
-/* .above1760 {
-  min-height: 50px;
-  background: white;
-  width: 100%;
-} */
-
 .below1760 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  min-height: 160px;
+  min-width: 100%;
   background: white;
   transform: translateY(-10px);
 }
@@ -372,13 +362,16 @@ svg rect {
 }
 
 #video {
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+
+  min-width: 100%;
+
   object-fit: cover;
 }
 .svg-box {
-  height: 70vh;
-  width: 100%;
+  min-height: 220px;
+  max-height: 70vh;
+  min-width: 320px;
   overflow-x: hidden;
   overflow-y: hidden;
   position: relative;
