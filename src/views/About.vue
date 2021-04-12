@@ -144,6 +144,10 @@
 <script>
 export default {
   setup() {},
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 
@@ -218,7 +222,7 @@ section {
   margin-right: 100px;
 
   .watermark-box {
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     /* top: 5%; */
     right: 0%;
@@ -233,7 +237,7 @@ section {
 
     p {
       font-size: 12em;
-      color: rgba(122, 122, 122, 0.075);
+      color: rgba(41, 30, 30, 0.2);
     }
   }
 }
@@ -241,7 +245,7 @@ section {
   content: "";
   position: absolute;
   width: 3px;
-  background: rgba(122, 122, 122, 0.075);
+  background: rgba(41, 30, 30, 0.2);
   top: 0;
   bottom: 0;
   left: 50%;

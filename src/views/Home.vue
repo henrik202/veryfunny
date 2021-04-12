@@ -1,230 +1,250 @@
 <template>
-  <div>
-    <main class="hero-section">
-      <div class="background-banner"></div>
+  <div id="landing-page" v-once>
+    <div id="carousel-container">
+      <b-carousel
+        id="carousel-1"
+        v-model="slide"
+        :interval="4000"
+        controls
+        indicators
+        background="#ababab"
+        img-width="1024"
+        img-height="480"
+        style="text-shadow: 1px 1px 2px #333"
+        @sliding-start="onSlideStart"
+        @sliding-end="onSlideEnd"
+      >
+        <b-carousel-slide v-for="campaign in campaigns" :key="campaign.name">
+          <template #img>
+            <img
+              id="carousel-img"
+              class="d-block img-fluid w-100"
+              width="1024"
+              height="480"
+              :src="require(`@/assets/${campaign.image}`)"
+              alt="image slot"
+            />
+          </template>
+        </b-carousel-slide>
+      </b-carousel>
+    </div>
 
-      <section class="hero-section-overlap">
-        <div class="above1760">
-          <!--whitespace-->
+    <section class="hero-section-overlap">
+      <div class="above1760">
+        <!--whitespace-->
+      </div>
+      <div class="svg-box">
+        <video loop autoplay playsinline preload muted id="video">
+          <source src="@/assets/production ID 3765078.mp4" />
+        </video>
+        <svg>
+          <defs>
+            <mask id="mask" x="0" y="0" height="100%" width="100%">
+              <rect x="0" y="0" height="100%" width="100%" />
+              <text x="50%" y="50%" fill="red" text-anchor="middle">
+                Lofothval
+              </text>
+            </mask>
+          </defs>
+          <rect x="0" y="0" height="100%" width="100%" />
+        </svg>
+      </div>
+      <div class="belowlofothval">
+        <div class="belowlofothvaltext">
+          <h2>Ren tradisjon</h2>
         </div>
-        <div class="svg-box">
-          <!--samme løsningen som med img-box, wrapper-->
-          <svg viewBox="0 0 auto 200">
-            <!--this value has to be the same as svg-box height (the svg box is set to pixels)-->
+      </div>
+      <div class="whitespacediv-three">
+        <!--whitespace-->
+      </div>
 
-            <defs>
-              <mask id="mask" x="0" y="0" height="100%" width="100%">
-                <rect x="0" y="0" height="100%" width="100%" />
-                <text
-                  x="50%"
-                  y="50%"
-                  fill="black"
-                  text-anchor="middle"
-                  fill-opacity="1"
-                >
-                  Lofothval
-                </text>
-              </mask>
-            </defs>
-            <rect x="0" y="0" height="100%" width="100%" />
-          </svg>
+      <div class="below1760">
+        <div class="below1760text">
+          <h3>Våre produkter</h3>
         </div>
-        <div class="belowlofothval">
-          <div class="belowlofothvaltext">
-            <h2>Ren tradisjon</h2>
-          </div>
+      </div>
+      <div class="ourcreations">
+        <div class="left-arrow" @click="moveLeft">
+          <b-icon
+            icon="arrow-left-circle-fill"
+            aria-hidden="true"
+            style="height: 50px; width: 50px; color: white"
+          ></b-icon>
         </div>
-        <div class="whitespacediv-three">
-          <!--whitespace-->
+        <div class="right-arrow" @click="moveRight">
+          <b-icon
+            icon="arrow-right-circle-fill"
+            style="height: 50px; width: 50px; color: white"
+            aria-hidden="true"
+          ></b-icon>
         </div>
+        <div class="creations-wrapper" ref="prod">
+          <!--flex container-->
+          <router-link
+            :to="{ name: 'ProduktInfo', params: { slug: produkt.slug } }"
+            v-for="produkt in produkter"
+            :key="produkt.name"
+          >
+            <img
+              :src="require(`@/assets/${produkt.image}`)"
+              alt="lettrøkt hvalkjøtt"
+            />
+            <span>{{ produkt.name }}</span>
+          </router-link>
+        </div>
+      </div>
 
-        <div class="below1760">
-          <div class="below1760text">
-            <h3>Våre produkter</h3>
-          </div>
-        </div>
-        <div class="ourcreations">
-          <div class="left-arrow" @click="moveLeft">
-            <b-icon
-              icon="arrow-left-circle-fill"
-              aria-hidden="true"
-              style="height: 50px; width: 50px; color: white"
-            ></b-icon>
-          </div>
-          <div class="right-arrow" @click="moveRight">
-            <b-icon
-              icon="arrow-right-circle-fill"
-              style="height: 50px; width: 50px; color: white"
-              aria-hidden="true"
-            ></b-icon>
-          </div>
-          <div class="creations-wrapper" ref="prod">
-            <!--flex container-->
-            <router-link
-              :to="{ name: 'ProduktInfo', params: { slug: produkt.slug } }"
-              v-for="produkt in produkter"
-              :key="produkt.name"
-            >
-              <img
-                :src="require(`@/assets/${produkt.image}`)"
-                alt="lettrøkt hvalkjøtt"
-              />
-              <span>{{ produkt.name }}</span>
-            </router-link>
-          </div>
-        </div>
-
-        <div class="her-collection">
-          <div class="collections-wrapper">
-            <!--grid container-->
-            <router-link
-              v-for="spesialitet in spesial"
-              :key="spesialitet.name"
-              :to="{ name: 'Spesial', params: { slug: spesialitet.slug } }"
-            >
-              <img
-                :src="require(`@/assets/${spesialitet.image}`)"
-                alt="lettrøkt hvalkjøtt"
-              />
-            </router-link>
-            <div class="collections-text-header">
-              <h1>Superior hvalbiff</h1>
-              <p>
-                Utforsk det ypperste og mest ettertraktede produktet innen
-                nordisk tradisjonsfiske
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="oppskrifter">
-          <div class="whitebox">
-            <div class="oppskrifter-text">
-              <h6>Ekstraordinær råvare</h6>
-              <span>Oppskrifter & inspirasjon</span>
-              <router-link to="/oppskrifter">Klikk her</router-link>
-            </div>
-          </div>
-        </div>
-        <div class="whitespacediv"></div>
-
-        <div class="parallax">
-          <!--this has pos relatve, background-img pos fixed etc...-->
-          <div class="overlaydark">
-            <div class="overlaytext">
-              <!--this has pos absolute-->
-              <span id="span1overlay">Mesterlig håndtverk</span>
-              <span id="span2overlay">Se hvordan vi gjør det</span>
-              <router-link :to="{ name: 'Handmade' }">Klikk her</router-link>
-            </div>
-          </div>
-        </div>
-
-        <div class="below-restaurant">
-          <div class="below-restaurant-text">
-            <p>Våre verdier</p>
-          </div>
-        </div>
-
-        <div class="benefits-cards">
+      <div class="her-collection">
+        <div class="collections-wrapper">
           <!--grid container-->
-          <div class="benefits-cards-wrapper1">
-            <!--flex container-->
-            <a href="#">
-              <img src="@/assets/640x427-minke-whale.png" alt="minke hval" />
-            </a>
-            <h1>Etisk ansvar</h1>
+          <router-link
+            v-for="spesialitet in spesial"
+            :key="spesialitet.name"
+            :to="{ name: 'Spesial', params: { slug: spesialitet.slug } }"
+          >
+            <img
+              :src="require(`@/assets/${spesialitet.image}`)"
+              alt="lettrøkt hvalkjøtt"
+            />
+          </router-link>
+          <div class="collections-text-header">
+            <h1>Superior hvalbiff</h1>
             <p>
-              Forvaltningen av hvalfangst er basert på vitenskapelige råd, og
-              underlagt strengt kontroll- og utøvelsesregelverk, både nasjonalt
-              og internasjonalt. Les mer om våre etiske forpliktelser her.
+              Utforsk det ypperste og mest ettertraktede produktet innen nordisk
+              tradisjonsfiske
             </p>
-            <div class="les-mer1">
-              <a href="#">Les mer</a>
-            </div>
           </div>
+        </div>
+      </div>
 
-          <div class="benefits-cards-wrapper1">
-            <!--flex container-->
-            <a href="#">
-              <img src="@/assets/gun.png" alt="sirkulær økonomi" />
-            </a>
-            <h1>Bærekraft</h1>
-            <p>
-              Bærekraftig mat er mat som inngår i bærekraftige produksjoner og
-              som fraktes via miljøvennlig transport. "Dette strekker vi oss
-              langt etter." Les mer om våre bærekraftmål her.
-            </p>
-            <div class="les-mer1">
-              <a href="#">Les mer</a>
-            </div>
+      <div class="oppskrifter">
+        <div class="whitebox">
+          <div class="oppskrifter-text">
+            <h6>Ekstraordinær råvare</h6>
+            <span>Oppskrifter & inspirasjon</span>
+            <router-link to="/oppskrifter">Klikk her</router-link>
           </div>
+        </div>
+      </div>
+      <div class="whitespacediv"></div>
 
-          <div class="benefits-cards-wrapper1">
-            <!--flex container-->
-            <a href="#">
-              <img
-                src="@/assets/2c045c01-a714-41a0-939f-af81cbe8bc3b.jpg"
-                alt="helsegevinst"
-              />
-            </a>
-            <h1>Helsegevinst</h1>
-            <p>
-              Hvalkjøtt inneholder nemlig næringsstoffer som: Omega 3 med de
-              helseriktige stoffene DPA og EPA. Jern, Vitamin A,Vitamin D.
-              Vitaminer fra B-gruppen som B6 og B12.
-            </p>
-            <div class="les-mer1">
-              <a href="#">Les mer</a>
-            </div>
+      <div class="parallax">
+        <!--this has pos relatve, background-img pos fixed etc...-->
+        <div class="overlaydark">
+          <div class="overlaytext">
+            <!--this has pos absolute-->
+            <span id="span1overlay">Mesterlig håndtverk</span>
+            <span id="span2overlay">Se hvordan vi gjør det</span>
+            <router-link :to="{ name: 'Handmade' }">Klikk her</router-link>
+          </div>
+        </div>
+      </div>
+
+      <div class="below-restaurant">
+        <div class="below-restaurant-text">
+          <p>Våre verdier</p>
+        </div>
+      </div>
+
+      <div class="benefits-cards">
+        <!--grid container-->
+        <div class="benefits-cards-wrapper1">
+          <!--flex container-->
+          <a href="#">
+            <img src="@/assets/640x427-minke-whale.png" alt="minke hval" />
+          </a>
+          <h1>Etisk ansvar</h1>
+          <p>
+            Forvaltningen av hvalfangst er basert på vitenskapelige råd, og
+            underlagt strengt kontroll- og utøvelsesregelverk, både nasjonalt og
+            internasjonalt. Les mer om våre etiske forpliktelser her.
+          </p>
+          <div class="les-mer1">
+            <a href="#">Les mer</a>
           </div>
         </div>
 
-        <div class="whitespacediv-three"></div>
-        <footer class="kontakt-info-felt">
-          <!--grid container-->
+        <div class="benefits-cards-wrapper1">
+          <!--flex container-->
+          <a href="#">
+            <img src="@/assets/gun.png" alt="sirkulær økonomi" />
+          </a>
+          <h1>Bærekraft</h1>
+          <p>
+            Bærekraftig mat er mat som inngår i bærekraftige produksjoner og som
+            fraktes via miljøvennlig transport. "Dette strekker vi oss langt
+            etter." Les mer om våre bærekraftmål her.
+          </p>
+          <div class="les-mer1">
+            <a href="#">Les mer</a>
+          </div>
+        </div>
 
-          <div class="footer-logo-container">
-            <div class="footer-logo-flexbox">
-              <div class="logobox"></div>
-              <span>Hvalprodukter</span>
+        <div class="benefits-cards-wrapper1">
+          <!--flex container-->
+          <a href="#">
+            <img
+              src="@/assets/2c045c01-a714-41a0-939f-af81cbe8bc3b.jpg"
+              alt="helsegevinst"
+            />
+          </a>
+          <h1>Helsegevinst</h1>
+          <p>
+            Hvalkjøtt inneholder nemlig næringsstoffer som: Omega 3 med de
+            helseriktige stoffene DPA og EPA. Jern, Vitamin A,Vitamin D.
+            Vitaminer fra B-gruppen som B6 og B12.
+          </p>
+          <div class="les-mer1">
+            <a href="#">Les mer</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="whitespacediv-three"></div>
+      <footer class="kontakt-info-felt">
+        <!--grid container-->
+
+        <div class="footer-logo-container">
+          <div class="footer-logo-flexbox">
+            <div class="logobox"></div>
+            <span>Hvalprodukter</span>
+          </div>
+        </div>
+
+        <div class="kontakt-info-container">
+          <div class="kontakt-info-flexbox">
+            <span>Lofothval AS</span>
+            <span>8390 Reine</span>
+            <span>Norway</span>
+            <span>Email:</span>
+            <span>tel:</span>
+          </div>
+        </div>
+
+        <div class="follow-us-container">
+          <div class="follow-us-flexbox">
+            <span>Følg oss på:</span>
+            <div class="sns-flexbox">
+              <a href="#">
+                <img src="@/assets/sns1_1.png" alt="instagram icon" />
+              </a>
+              <a href="#">
+                <img src="@/assets/sns1_2.png" alt="twitter icon" />
+              </a>
+              <a href="#">
+                <img src="@/assets/sns1_3.png" alt="vimeo icon" />
+              </a>
             </div>
           </div>
-
-          <div class="kontakt-info-container">
-            <div class="kontakt-info-flexbox">
-              <span>Lofothval AS</span>
-              <span>8390 Reine</span>
-              <span>Norway</span>
-              <span>Email:</span>
-              <span>tel:</span>
-            </div>
-          </div>
-
-          <div class="follow-us-container">
-            <div class="follow-us-flexbox">
-              <span>Følg oss på:</span>
-              <div class="sns-flexbox">
-                <a href="#">
-                  <img src="@/assets/sns1_1.png" alt="instagram icon" />
-                </a>
-                <a href="#">
-                  <img src="@/assets/sns1_2.png" alt="twitter icon" />
-                </a>
-                <a href="#">
-                  <img src="@/assets/sns1_3.png" alt="vimeo icon" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </section>
-    </main>
+        </div>
+      </footer>
+    </section>
   </div>
 </template>
 
 <script>
 import store from "../store";
+import campaignstore from "../campaignstore";
 export default {
   name: "Home",
 
@@ -232,6 +252,9 @@ export default {
     return {
       produkter: store.produkter,
       spesial: store.spesial,
+      campaigns: campaignstore.campaigns,
+      slide: 0,
+      sliding: null,
     };
   },
   methods: {
@@ -241,38 +264,37 @@ export default {
     moveRight() {
       this.$refs.prod.scrollLeft += 300;
     },
+
+    onSlideStart(slide) {
+      this.sliding = true;
+    },
+    onSlideEnd(slide) {
+      this.sliding = false;
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.hero-section {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  background-image: url("~@/assets/pexels-valeria-boltneva-1639562.jpg");
-  height: calc(100vh - 90px);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+#landing-page {
+  height: 100%;
   position: relative;
-  overflow-x: hidden;
-  scrollbar-width: none;
-
-  .background-banner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.295);
-
-    display: flex;
-
-    .banner-text {
-      color: white;
-      height: 100%;
-    }
-  }
+  width: 100%;
 }
 
+#carousel-1 {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-item {
+  width: 100%;
+}
+
+#carousel-img {
+  height: 100%;
+  width: 100%;
+}
 //SECTION 2
 //SECTION 2
 //SECTION 2
@@ -337,6 +359,10 @@ svg {
   align-self: center;
   height: 100%;
   width: 100%;
+  transform: 1s font-size;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 svg rect {
@@ -344,8 +370,13 @@ svg rect {
   mask: url(#mask);
 }
 
-.svg-box {
+#video {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.svg-box {
+  height: 200px;
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -361,9 +392,6 @@ svg rect {
   margin-top: 0;
   z-index: 1003;
   cursor: initial;
-  position: absolute;
-  top: 100%;
-  left: 0;
 }
 
 .below1760text {
@@ -402,7 +430,7 @@ svg rect {
     background: transparent;
     position: absolute;
     left: 7%;
-    top: 0;
+    top: 50%;
     z-index: 500;
     display: flex;
     align-items: center;
@@ -414,7 +442,7 @@ svg rect {
     background: transparent;
     position: absolute;
     right: 7%;
-    top: 0;
+    top: 50%;
     z-index: 500;
     display: flex;
     align-items: center;
@@ -613,7 +641,6 @@ svg rect {
   background-image: url("~@/assets/a57fb2b9ec24a9f074035c5290585c1e.jpg");
   position: relative;
   opacity: 1;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -621,7 +648,7 @@ svg rect {
   .overlaydark {
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.699);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 2000;
     display: flex;
     align-items: center;
@@ -638,7 +665,7 @@ svg rect {
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.95);
 
       #span1overlay {
         font-size: 2.5em;
