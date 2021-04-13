@@ -222,7 +222,7 @@ section {
   margin-right: 100px;
 
   .watermark-box {
-    z-index: 1;
+    z-index: 0;
     position: absolute;
     /* top: 5%; */
     right: 0%;
@@ -249,9 +249,11 @@ section {
   top: 0;
   bottom: 0;
   left: 50%;
+  z-index: 0;
 }
 
 .content-right {
+  z-index: 1;
   min-width: 120px;
   float: right;
   padding-left: 40px;
@@ -283,6 +285,8 @@ section {
   }
 }
 .content-left {
+  z-index: 1;
+
   min-width: 120px;
   height: fit-content;
   padding-top: 50px;
@@ -327,6 +331,8 @@ section {
 }
 
 .content-right-row-2 {
+  z-index: 1;
+
   min-width: 120px;
 
   float: right;
@@ -374,6 +380,8 @@ section {
 }
 
 .content-left-row-2 {
+  z-index: 1;
+
   min-width: 120px;
   float: left;
   padding-top: 50px;

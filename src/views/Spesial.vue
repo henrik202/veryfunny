@@ -88,7 +88,7 @@ export default {
   width: 100%;
   height: 100%;
   background: black;
-  background-image: url("~@/assets/pexels-valeria-boltneva-1639562.jpg");
+  background-image: url("~@/assets/MozJpeg/pexels-valeria-boltneva-1639562-w33.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

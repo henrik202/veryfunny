@@ -128,7 +128,6 @@ h1 {
     list-style-type: none;
     width: 80%;
     height: 100%;
-    gap: 20px;
     flex-wrap: wrap;
 
     .oppskrift-link {
@@ -137,6 +136,8 @@ h1 {
       display: flex;
       flex: 0 1 25%;
       min-width: 320px;
+      margin: 10px;
+
       a {
         height: fit-content;
         width: 100%;

@@ -326,7 +326,6 @@ export default {
   background: transparent;
   margin-bottom: 40px;
   width: 80%;
-  gap: 2em;
   overflow-x: scroll;
   scrollbar-width: none;
   white-space: nowrap;
@@ -336,6 +335,8 @@ export default {
   a {
     height: fit-content;
     min-width: 320px;
+    margin: 0px 10px;
+
     flex: 0 1 25%;
     display: flex;
     flex-direction: column;

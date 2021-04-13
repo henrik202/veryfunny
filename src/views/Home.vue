@@ -34,9 +34,10 @@
 
       </div> -->
       <div class="svg-box">
-        <video loop autoplay playsinline preload muted id="video">
-          <source src="@/assets/production ID 3765078.mp4" />
-        </video>
+        <picture preload id="video">
+          <source>
+          <img src="@/assets/28515989_10156115982581303_1092135773119914924_o.jpg" alt="mountains" id="mask-img">
+        </picture>
         <svg>
           <defs>
             <mask id="mask" x="0" y="0" height="100%" width="100%">
@@ -114,6 +115,11 @@
       </div>
 
       <div class="oppskrifter">
+        <picture>
+          <source media="(min-width:1040px)" srcset="@/assets/webP/pexels-valeria-boltneva-1639557-w33.webp, @/assets/MozJpeg/pexels-valeria-boltneva-1639557-w33.jpg">
+          <source media="(min-width: 320px)" srcset="@/assets/webP/pexels-valeria-boltneva-1639557-w25.webp, @/assets/MozJpeg/pexels-valeria-boltneva-1639557-w25.jpg">
+          <img src="@/assets/MozJpeg/pexels-valeria-boltneva-1639557-w25.jpg" alt="delicious recipe" class="recipe-img">
+        </picture>
         <div class="whitebox">
           <div class="oppskrifter-text">
             <h6>Ekstraordinær råvare</h6>
@@ -139,60 +145,6 @@
       <div class="below-restaurant">
         <div class="below-restaurant-text">
           <p>Våre verdier</p>
-        </div>
-      </div>
-
-      <div class="benefits-cards">
-        <!--grid container-->
-        <div class="benefits-cards-wrapper1">
-          <!--flex container-->
-          <a href="#">
-            <img src="@/assets/640x427-minke-whale.png" alt="minke hval" />
-          </a>
-          <h1>Etisk ansvar</h1>
-          <p>
-            Forvaltningen av hvalfangst er basert på vitenskapelige råd, og
-            underlagt strengt kontroll- og utøvelsesregelverk, både nasjonalt og
-            internasjonalt. Les mer om våre etiske forpliktelser her.
-          </p>
-          <div class="les-mer1">
-            <a href="#">Les mer</a>
-          </div>
-        </div>
-
-        <div class="benefits-cards-wrapper1">
-          <!--flex container-->
-          <a href="#">
-            <img src="@/assets/gun.png" alt="sirkulær økonomi" />
-          </a>
-          <h1>Bærekraft</h1>
-          <p>
-            Bærekraftig mat er mat som inngår i bærekraftige produksjoner og som
-            fraktes via miljøvennlig transport. "Dette strekker vi oss langt
-            etter." Les mer om våre bærekraftmål her.
-          </p>
-          <div class="les-mer1">
-            <a href="#">Les mer</a>
-          </div>
-        </div>
-
-        <div class="benefits-cards-wrapper1">
-          <!--flex container-->
-          <a href="#">
-            <img
-              src="@/assets/2c045c01-a714-41a0-939f-af81cbe8bc3b.jpg"
-              alt="helsegevinst"
-            />
-          </a>
-          <h1>Helsegevinst</h1>
-          <p>
-            Hvalkjøtt inneholder nemlig næringsstoffer som: Omega 3 med de
-            helseriktige stoffene DPA og EPA. Jern, Vitamin A,Vitamin D.
-            Vitaminer fra B-gruppen som B6 og B12.
-          </p>
-          <div class="les-mer1">
-            <a href="#">Les mer</a>
-          </div>
         </div>
       </div>
 
@@ -272,6 +224,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=block");
 #landing-page {
   height: 100%;
   position: relative;
@@ -296,8 +249,6 @@ export default {
 //SECTION 2
 //SECTION 2
 //SECTION 2
-
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 
 #trad {
   transform: translateY(80px);
@@ -368,6 +319,10 @@ svg rect {
 
   object-fit: cover;
 }
+#mask-img {
+  min-height: 70vh;
+  min-width: 100vw;
+}
 .svg-box {
   min-height: 220px;
   max-height: 70vh;
@@ -382,7 +337,7 @@ svg rect {
 
 .hero-section-overlap {
   height: fit-content;
-  min-width: 320px;
+  width: 100%;
   margin-top: 0;
   z-index: 1003;
   cursor: initial;
@@ -461,7 +416,6 @@ svg rect {
   white-space: nowrap;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  gap: 10px;
   margin: 0px 20px;
 
   a {
@@ -477,6 +431,8 @@ svg rect {
 
     min-width: 320px;
     flex: 0 1 25%;
+
+    margin: 0px 10px;
   }
 
   a img {
@@ -563,12 +519,12 @@ svg rect {
 
 .oppskrifter {
   background: white;
-  height: 600px;
+  height: fit-content;
   width: 100%;
-  background-size: cover;
+  /* background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("~@/assets/pexels-valeria-boltneva-1639557.jpg");
+  background-image: url("~@/assets/pexels-valeria-boltneva-1639557.jpg"); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -628,6 +584,11 @@ svg rect {
       color: white;
     }
   }
+}
+
+.recipe-img {
+  height: 100%;
+  width: 100%;
 }
 
 .parallax {

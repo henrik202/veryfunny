@@ -19,9 +19,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=block");
 #app {
-  font-family: montserrat, sans-serif;
+  font-family: montserrat, "Courier New", monospace;
   background: rgb(0, 0, 0);
 }
 *,
@@ -38,14 +38,14 @@ html {
   width: 100%;
   font-size: 12px;
   overflow-x: hidden;
-  font-family: montserrat, sans-serif;
+  font-family: montserrat, "Courier New", monospace;
 }
 
 .router-box {
   height: calc(100% - 90px);
   width: 100%;
   padding-top: 90px;
-  font-family: montserrat, sans-serif;
+  font-family: montserrat, "Courier New", monospace;
   overflow-x: hidden;
 }
 
