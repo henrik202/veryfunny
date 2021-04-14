@@ -1,6 +1,6 @@
 <template>
   <div id="landing-page" v-once>
-    <!-- <div id="carousel-container">
+    <div id="carousel-container">
       <b-carousel
         id="carousel-1"
         v-model="slide"
@@ -21,39 +21,17 @@
               class="d-block img-fluid w-100"
               width="1024"
               height="480"
-              :src="require(`@/assets/${campaign.image}`)"
+              :src="require(`@/assets/jpg/${campaign.image}`)"
               alt="image slot"
             />
           </template>
         </b-carousel-slide>
       </b-carousel>
-    </div> -->
+    </div>
 
     <section class="hero-section-overlap">
       <!-- <div class="above1760">
-
       </div> -->
-      <div class="svg-box">
-        <picture preload id="video">
-          <source>
-          <img src="@/assets/jpg/28515989_10156115982581303_1092135773119914924_o-min.jpg" alt="mountains" id="mask-img">
-        </picture>
-        <svg>
-          <defs>
-            <mask id="mask" x="0" y="0" height="100%" width="100%">
-              <rect x="0" y="0" height="100%" width="100%" />
-              <text x="50%" y="50%" fill="red" text-anchor="middle">
-                Lofothval
-              </text>
-              <br>
-              <text x="50%" y="50%" fill="red" text-anchor="middle" id="trad">
-                Ren tradisjon
-              </text>
-            </mask>
-          </defs>
-          <rect x="0" y="0" height="100%" width="100%" />
-        </svg>
-      </div>
 
       <div class="below1760">
         <div class="below1760text">
@@ -83,7 +61,7 @@
             :key="produkt.name"
           >
             <img
-            class="lazyload"
+              class="lazyload"
               :data-src="require(`@/assets/jpg/${produkt.image}`)"
               alt="lettrøkt hvalkjøtt"
             />
@@ -101,7 +79,6 @@
             :to="{ name: 'Spesial', params: { slug: spesialitet.slug } }"
           >
             <img
-            
               :src="require(`@/assets/jpg/${spesialitet.image}`)"
               alt="lettrøkt hvalkjøtt"
             />
@@ -118,9 +95,23 @@
 
       <div class="oppskrifter">
         <picture>
-          <source srcset="@/assets/webP/pexels-valeria-boltneva-1639557-min-25.webp">
-          <source srcset="@/assets/jpg/pexels-valeria-boltneva-1639557-min-25.jpg">
-          <img data-src="@/assets/jpg/pexels-valeria-boltneva-1639557-min-25.jpg" alt="delicious recipe" class="recipe-img lazyload">
+          <source
+            srcset="
+              @/assets/webP/pexels-valeria-boltneva-1639557-min-25.webp 1627w,
+              @/assets/webP/pexels-valeria-boltneva-1639557-min-33.webp 2169w
+            "
+          />
+          <source
+            srcset="
+              @/assets/jpg/pexels-valeria-boltneva-1639557-min-25.jpg 1627w,
+              @/assets/jpg/pexels-valeria-boltneva-1639557-min-33.jpg 2169w
+            "
+          />
+          <img
+            data-src="@/assets/jpg/pexels-valeria-boltneva-1639557-min-25.jpg"
+            alt="delicious recipe"
+            class="recipe-img lazyload"
+          />
         </picture>
         <div class="whitebox">
           <div class="oppskrifter-text">
@@ -235,27 +226,26 @@ export default {
 }
 
 #carousel-1 {
-  height: 100%;
+  height: fit-content;
   width: 100%;
+  background-color: black;
 }
 
 .carousel-item {
   width: 100%;
+  height: 70vh;
 }
 
 #carousel-img {
   height: 100%;
   width: 100%;
+  object-fit: contain;
 }
 //SECTION 2
 //SECTION 2
 //SECTION 2
 //SECTION 2
 
-#trad {
-  transform: translateY(80px);
-  font-size: 0.4em;
-}
 .belowlofothval {
   width: 100%;
 
@@ -290,51 +280,6 @@ export default {
   min-height: 160px;
   min-width: 100%;
   background: white;
-  transform: translateY(-10px);
-}
-
-svg {
-  font-size: 8em;
-  letter-spacing: 5px;
-  font-family: montserrat;
-  font-weight: 900;
-  justify-self: center;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  transition: all 1s ease;
-  transform: 1s font-size;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-svg rect {
-  fill: white;
-  mask: url(#mask);
-}
-
-#video {
-  height: 70vh;
-
-  min-width: 100vw;
-
-  object-fit: cover;
-}
-#mask-img {
-  min-height: 70vh;
-  min-width: 100vw;
-}
-.svg-box {
-  min-height: 220px;
-  max-height: 70vh;
-  min-width: 320px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  position: relative;
-
-  bottom: 0;
-  right: 0;
 }
 
 .hero-section-overlap {
@@ -381,7 +326,7 @@ svg rect {
     background: transparent;
     position: absolute;
     left: 7%;
-    top: 40%;
+    top: 0%;
     z-index: 500;
     display: flex;
     align-items: center;
@@ -393,7 +338,7 @@ svg rect {
     background: transparent;
     position: absolute;
     right: 7%;
-    top: 40%;
+    top: 0%;
     z-index: 500;
     display: flex;
     align-items: center;
@@ -532,6 +477,7 @@ svg rect {
   justify-content: center;
   flex-direction: column;
   font-family: montserrat;
+  position: relative;
 
   .whitebox {
     background: rgba(255, 255, 255, 0.726);
@@ -541,6 +487,7 @@ svg rect {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: absolute;
 
     .oppskrifter-text {
       display: flex;
@@ -589,8 +536,9 @@ svg rect {
 }
 
 .recipe-img {
-  height: 100%;
+  height: 600px;
   width: 100%;
+  object-fit: cover;
 }
 
 .parallax {

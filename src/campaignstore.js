@@ -3,13 +3,13 @@ export default {
     {
       name: "Barents",
       slug: "barents",
-      image: "pexels-valeria-boltneva-1639562.jpg",
+      image: "pexels-valeria-boltneva-1639562-min-25.jpg",
       id: 1,
 
       campaigndetails: [
         {
           title: "Barents",
-          image: "pexels-valeria-boltneva-1639562.jpg",
+          image: "pexels-valeria-boltneva-1639562-min-25.jpg",
           generell: "Generell info om produktet her",
           vekt: "500g",
           ingredienser:
@@ -27,13 +27,13 @@ export default {
     {
       name: "Burg",
       slug: "burg",
-      image: "pexels-valeria-boltneva-1639557.jpg",
+      image: "pexels-valeria-boltneva-1639557-min-25.jpg",
       id: 1,
 
       campaigndetails: [
         {
           title: "Burg",
-          image: "pexels-valeria-boltneva-1639557.jpg",
+          image: "pexels-valeria-boltneva-1639557-min-25.jpg",
           generell: "Generell info om produktet her",
           vekt: "500g",
           ingredienser:
