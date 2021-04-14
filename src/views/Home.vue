@@ -1,34 +1,5 @@
 <template>
   <div id="landing-page" v-once>
-    <div id="carousel-container">
-      <b-carousel
-        id="carousel-1"
-        v-model="slide"
-        :interval="4000"
-        controls
-        indicators
-        background="#ababab"
-        img-width="1024"
-        img-height="480"
-        style="text-shadow: 1px 1px 2px #333"
-        @sliding-start="onSlideStart"
-        @sliding-end="onSlideEnd"
-      >
-        <b-carousel-slide v-for="campaign in campaigns" :key="campaign.name">
-          <template #img>
-            <img
-              id="carousel-img"
-              class="d-block img-fluid w-100"
-              width="1024"
-              height="480"
-              :src="require(`@/assets/jpg/${campaign.image}`)"
-              alt="image slot"
-            />
-          </template>
-        </b-carousel-slide>
-      </b-carousel>
-    </div>
-
     <section class="hero-section-overlap">
       <!-- <div class="above1760">
       </div> -->
@@ -96,16 +67,7 @@
       <div class="oppskrifter">
         <picture>
           <source
-            srcset="
-              @/assets/webP/pexels-valeria-boltneva-1639557-min-25.webp 1627w,
-              @/assets/webP/pexels-valeria-boltneva-1639557-min-33.webp 2169w
-            "
-          />
-          <source
-            srcset="
-              @/assets/jpg/pexels-valeria-boltneva-1639557-min-25.jpg 1627w,
-              @/assets/jpg/pexels-valeria-boltneva-1639557-min-33.jpg 2169w
-            "
+            srcset="@/assets/webP/pexels-valeria-boltneva-1639557-min-25.webp"
           />
           <img
             data-src="@/assets/jpg/pexels-valeria-boltneva-1639557-min-25.jpg"
