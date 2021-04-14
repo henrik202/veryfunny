@@ -24,7 +24,10 @@
         <li class="row-1">
           <div class="content-left">
             <div class="img-content">
-              <img src="@/assets/2_000000000041.jpg" alt="Selskapslogo" />
+              <img
+                src="@/assets/jpg/2_000000000041-min.jpg"
+                alt="Selskapslogo"
+              />
             </div>
           </div>
           <div class="content-right">
@@ -56,14 +59,20 @@
           </div>
           <div class="content-right-row-2">
             <div class="img-content-row-2">
-              <img src="@/assets/2_000000000041.jpg" alt="Selskapslogo" />
+              <img
+                src="@/assets/jpg/2_000000000041-min.jpg"
+                alt="Selskapslogo"
+              />
             </div>
           </div>
         </li>
         <li class="row-1">
           <div class="content-left">
             <div class="img-content">
-              <img src="@/assets/2_000000000041.jpg" alt="Selskapslogo" />
+              <img
+                src="@/assets/jpg/2_000000000041-min.jpg"
+                alt="Selskapslogo"
+              />
             </div>
           </div>
           <div class="content-right">
@@ -94,7 +103,10 @@
           </div>
           <div class="content-right-row-2">
             <div class="img-content-row-2">
-              <img src="@/assets/2_000000000041.jpg" alt="Selskapslogo" />
+              <img
+                src="@/assets/jpg/2_000000000041-min.jpg"
+                alt="Selskapslogo"
+              />
             </div>
           </div>
         </li>
@@ -126,13 +138,13 @@
           <span>Følg oss på:</span>
           <div class="sns-flexbox">
             <a href="#">
-              <img src="@/assets/sns1_1.png" alt="instagram icon" />
+              <img src="@/assets/png/sns1_1-min.png" alt="instagram icon" />
             </a>
             <a href="#">
-              <img src="@/assets/sns1_2.png" alt="twitter icon" />
+              <img src="@/assets/png/sns1_2-min.png" alt="twitter icon" />
             </a>
             <a href="#">
-              <img src="@/assets/sns1_3.png" alt="vimeo icon" />
+              <img src="@/assets/png/sns1_3-min.png" alt="vimeo icon" />
             </a>
           </div>
         </div>
@@ -472,7 +484,7 @@ section {
     }
 
     .logobox {
-      background-image: url("~@/assets/Lofothval_sort.png");
+      background-image: url("~@/assets/png/Lofothval_sort-min.png");
       height: 100px;
       width: 150px;
       background-repeat: no-repeat;

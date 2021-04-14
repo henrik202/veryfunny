@@ -7,7 +7,7 @@
     >
       <div class="produkt-info-header">
         <span id="info">{{ info.title }}</span>
-        <img :src="require(`@/assets/${info.image}`)" :alt="info.title" />
+        <img :src="require(`@/assets/jpg/${info.image}`)" :alt="info.title" />
       </div>
       <div class="produkt-beskrivelse" id="produkt-intro">
         <p>{{ slug }}</p>

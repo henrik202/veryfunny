@@ -3,13 +3,13 @@ export default {
     {
       name: "Hvalbiff",
       slug: "hvalbiff-superior",
-      image: "hvalbiff-ravare.jpg",
+      image: "hvalbiff-ravare-min.jpg",
       id: 5,
 
       produktinfo: [
         {
           title: "Hvalbiff",
-          image: "hvalbiff-ravare.jpg",
+          image: "hvalbiff-ravare-min.jpg",
           generell: "Generell info om produktet her",
           vekt: "500g",
           ingredienser:

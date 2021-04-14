@@ -36,7 +36,7 @@
       <div class="svg-box">
         <picture preload id="video">
           <source>
-          <img src="@/assets/28515989_10156115982581303_1092135773119914924_o.jpg" alt="mountains" id="mask-img">
+          <img src="@/assets/jpg/28515989_10156115982581303_1092135773119914924_o-min.jpg" alt="mountains" id="mask-img">
         </picture>
         <svg>
           <defs>
@@ -84,7 +84,7 @@
           >
             <img
             class="lazyload"
-              :data-src="require(`@/assets/${produkt.image}`)"
+              :data-src="require(`@/assets/jpg/${produkt.image}`)"
               alt="lettrøkt hvalkjøtt"
             />
             <span>{{ produkt.name }}</span>
@@ -102,7 +102,7 @@
           >
             <img
             
-              :src="require(`@/assets/${spesialitet.image}`)"
+              :src="require(`@/assets/jpg/${spesialitet.image}`)"
               alt="lettrøkt hvalkjøtt"
             />
           </router-link>
@@ -118,9 +118,9 @@
 
       <div class="oppskrifter">
         <picture>
-          <source media="(min-width:1040px)" srcset="@/assets/webP/pexels-valeria-boltneva-1639557-w33.webp, @/assets/MozJpeg/pexels-valeria-boltneva-1639557-w33.jpg">
-          <source media="(min-width: 320px)" srcset="@/assets/webP/pexels-valeria-boltneva-1639557-w25.webp, @/assets/MozJpeg/pexels-valeria-boltneva-1639557-w25.jpg">
-          <img data-src="@/assets/MozJpeg/pexels-valeria-boltneva-1639557-w25.jpg" alt="delicious recipe" class="recipe-img lazyload">
+          <source srcset="@/assets/webP/pexels-valeria-boltneva-1639557-min-25.webp">
+          <source srcset="@/assets/jpg/pexels-valeria-boltneva-1639557-min-25.jpg">
+          <img data-src="@/assets/jpg/pexels-valeria-boltneva-1639557-min-25.jpg" alt="delicious recipe" class="recipe-img lazyload">
         </picture>
         <div class="whitebox">
           <div class="oppskrifter-text">
@@ -176,13 +176,13 @@
             <span>Følg oss på:</span>
             <div class="sns-flexbox">
               <a href="#">
-                <img src="@/assets/sns1_1.png" alt="instagram icon" />
+                <img src="@/assets/png/sns1_1-min.png" alt="instagram icon" />
               </a>
               <a href="#">
-                <img src="@/assets/sns1_2.png" alt="twitter icon" />
+                <img src="@/assets/png/sns1_2-min.png" alt="twitter icon" />
               </a>
               <a href="#">
-                <img src="@/assets/sns1_3.png" alt="vimeo icon" />
+                <img src="@/assets/png/sns1_3-min.png" alt="vimeo icon" />
               </a>
             </div>
           </div>
@@ -595,7 +595,7 @@ svg rect {
 
 .parallax {
   height: 600px;
-  background-image: url("~@/assets/a57fb2b9ec24a9f074035c5290585c1e.jpg");
+  background-image: url("~@/assets/jpg/a57fb2b9ec24a9f074035c5290585c1e-min.jpg");
   position: relative;
   opacity: 1;
   background-position: center;
@@ -845,7 +845,7 @@ svg rect {
     }
 
     .logobox {
-      background-image: url("~@/assets/Lofothval_sort.png");
+      background-image: url("~@/assets/png/Lofothval_sort-min.png");
       height: 100px;
       width: 150px;
       background-repeat: no-repeat;

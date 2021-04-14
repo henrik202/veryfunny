@@ -3,13 +3,13 @@ export default {
     {
       name: "Lettrøkt hvalkjøtt",
       slug: "lettrøkt-hvalkjøtt",
-      image: "3_000000000041.jpg",
+      image: "3_000000000041-min.jpg",
       id: 1,
 
       produktinfo: [
         {
           title: "Lettrøkt hvalkjøtt",
-          image: "3_000000000041.jpg",
+          image: "3_000000000041-min.jpg",
           generell:
             "Generell info om produktet her877777777777789482347923874729847",
           vekt: "500g",
@@ -28,13 +28,13 @@ export default {
     {
       name: "Kjøttdeig av hval",
       slug: "kjøttdeig-av-hval",
-      image: "2_000000000041.jpg",
+      image: "2_000000000041-min.jpg",
       id: 2,
 
       produktinfo: [
         {
           title: "Kjøttdeig av hval",
-          image: "2_000000000041.jpg",
+          image: "2_000000000041-min.jpg",
           generell: "Generell info om produktet her",
           vekt: "500g",
           ingredienser:
@@ -53,13 +53,13 @@ export default {
     {
       name: "Spekepølse av hval",
       slug: "spekepølse",
-      image: "1_000000000033.jpg",
+      image: "1_000000000033-min.jpg",
       id: 3,
 
       produktinfo: [
         {
           title: "Spekepølse av hval",
-          image: "1_000000000033.jpg",
+          image: "1_000000000033-min.jpg",
           generell: "Generell info om produktet her",
           vekt: "500g",
           ingredienser:
@@ -77,13 +77,13 @@ export default {
     {
       name: "Hvalburgeren",
       slug: "hvalburgeren",
-      image: "9_000000000033.jpg",
+      image: "9_000000000033-min.jpg",
       id: 4,
 
       produktinfo: [
         {
           title: "Hvalburgeren",
-          image: "9_000000000033.jpg",
+          image: "9_000000000033-min.jpg",
           generell: "Generell info om produktet her",
           vekt: "500g",
           ingredienser:
@@ -101,13 +101,13 @@ export default {
     {
       name: "Hvalburgerto",
       slug: "hvalburgerto",
-      image: "9_000000000033.jpg",
+      image: "9_000000000033-min.jpg",
       id: 4,
 
       produktinfo: [
         {
           title: "Hvalburgerto",
-          image: "9_000000000033.jpg",
+          image: "9_000000000033-min.jpg",
           generell: "Generell info om produktet her",
           vekt: "500g",
           ingredienser:
@@ -125,13 +125,13 @@ export default {
     {
       name: "Hvalburgertre",
       slug: "hvalburgertre",
-      image: "9_000000000033.jpg",
+      image: "9_000000000033-min.jpg",
       id: 4,
 
       produktinfo: [
         {
           title: "Hvalburgertre",
-          image: "9_000000000033.jpg",
+          image: "9_000000000033-min.jpg",
           generell: "Generell info om produktet her",
           vekt: "500g",
           ingredienser:
@@ -149,13 +149,13 @@ export default {
     {
       name: "Hvalburgerfire",
       slug: "hvalburgerfire",
-      image: "9_000000000033.jpg",
+      image: "9_000000000033-min.jpg",
       id: 4,
 
       produktinfo: [
         {
           title: "Hvalburgerfire",
-          image: "9_000000000033.jpg",
+          image: "9_000000000033-min.jpg",
           generell: "Generell info om produktet her",
           vekt: "500g",
           ingredienser:
@@ -176,13 +176,13 @@ export default {
     {
       name: "Hvalbiff",
       slug: "hvalbiff",
-      image: "hvalbiff-ravare.jpg",
+      image: "hvalbiff-ravare-min.jpg",
       id: 5,
 
       produktinfo: [
         {
           title: "Hvalbiff",
-          image: "hvalbiff-ravare.jpg",
+          image: "hvalbiff-ravare-min.jpg",
           generell: "Generell info om produktet her",
           vekt: "500g",
           ingredienser:

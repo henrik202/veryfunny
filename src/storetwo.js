@@ -3,7 +3,7 @@ export default {
     {
       name: "Hvalgryte",
       slug: "hvalgryte-oppskrift",
-      image: "1_000000000033.jpg",
+      image: "1_000000000033-min.jpg",
       sesong: ["Vinter", "Alle", "Varmretter"],
 
       oppskriftinfo: [
@@ -13,7 +13,7 @@ export default {
 
           sesong: "Vinter",
           temperatur: "varmrett",
-          image: "1_000000000033.jpg",
+          image: "1_000000000033-min.jpg",
           phrase: "Luksuslunsj eller en supergod og sunn middag? ",
           anbefaling:
             "Den grove konsistensen samt den rene og naturlige smaken smaken passer ypperlig sammen med rødløken og ruccolaen. ",
@@ -24,7 +24,7 @@ export default {
     {
       name: "Grillet hvalkjott",
       slug: "grillet-hvalkjott-oppskrift",
-      image: "2_000000000041.jpg",
+      image: "2_000000000041-min.jpg",
       sesong: ["Sommer", "Alle", "Varmretter"],
 
       oppskriftinfo: [
@@ -32,7 +32,7 @@ export default {
           sesong: "Sommer",
           name: "Grillet hvalkjott",
           temperatur: "varmrett",
-          image: "2_000000000041.jpg",
+          image: "2_000000000041-min.jpg",
           phrase: "Luksuslunsj eller en supergod og sunn middag? ",
           anbefaling:
             "Den grove konsistensen samt den rene og naturlige smaken smaken passer ypperlig sammen med rødløken og ruccolaen. ",
@@ -44,7 +44,7 @@ export default {
     {
       name: "Hvalburgerburger",
       slug: "hvalburgerburger-oppskrift",
-      image: "3_000000000041.jpg",
+      image: "3_000000000041-min.jpg",
       sesong: ["Sommer", "Alle", "Grill", "Varmretter"],
 
       oppskriftinfo: [
@@ -53,7 +53,7 @@ export default {
 
           sesong: "Sommer",
           temperatur: "varmrett",
-          image: "3_000000000041.jpg",
+          image: "3_000000000041-min.jpg",
           phrase: "Luksuslunsj eller en supergod og sunn middag? ",
           anbefaling:
             "Den grove konsistensen samt den rene og naturlige smaken smaken passer ypperlig sammen med rødløken og ruccolaen. ",
@@ -65,7 +65,7 @@ export default {
     {
       name: "Kjottkaker",
       slug: "kjottkaker-oppskrift",
-      image: "9_000000000033.jpg",
+      image: "9_000000000033-min.jpg",
       sesong: ["Vinter", "Alle", "Varmretter"],
 
       oppskriftinfo: [
@@ -74,7 +74,7 @@ export default {
           name: "Kjottkaker",
 
           temperatur: "kaldrett",
-          image: "9_000000000033.jpg",
+          image: "9_000000000033-min.jpg",
           phrase: "Luksuslunsj eller en supergod og sunn middag? ",
           anbefaling:
             "Den grove konsistensen samt den rene og naturlige smaken smaken passer ypperlig sammen med rødløken og ruccolaen. ",
@@ -85,7 +85,7 @@ export default {
     {
       name: "Hvalstuing",
       slug: "hvalstuing-oppskrift",
-      image: "1_000000000033.jpg",
+      image: "1_000000000033-min.jpg",
       sesong: ["Vinter", "Alle", "Kaldretter"],
 
       oppskriftinfo: [
@@ -94,7 +94,7 @@ export default {
 
           sesong: "Vinter",
           temperatur: "varmrett",
-          image: "1_000000000033.jpg",
+          image: "1_000000000033-min.jpg",
           phrase: "Luksuslunsj eller en supergod og sunn middag? ",
           ingrediens: "Spekepølse av hval",
         },
@@ -104,7 +104,7 @@ export default {
     {
       name: "Grillet kjott",
       slug: "grillet-kjott-oppskrift",
-      image: "2_000000000041.jpg",
+      image: "2_000000000041-min.jpg",
       sesong: ["Sommer", "Alle", "Grill", "Varmretter"],
 
       oppskriftinfo: [
@@ -113,7 +113,7 @@ export default {
           name: "Grillet kjott",
 
           temperatur: "varmrett",
-          image: "2_000000000041.jpg",
+          image: "2_000000000041-min.jpg",
           phrase: "Luksuslunsj eller en supergod og sunn middag? ",
           anbefaling:
             "Den grove konsistensen samt den rene og naturlige smaken smaken passer ypperlig sammen med rødløken og ruccolaen. ",
@@ -125,7 +125,7 @@ export default {
     {
       name: "Hvalpasta",
       slug: "hvalpasta-oppskrift",
-      image: "3_000000000041.jpg",
+      image: "3_000000000041-min.jpg",
       sesong: ["Sommer", "Alle", "Kaldretter"],
 
       oppskriftinfo: [
@@ -134,7 +134,7 @@ export default {
 
           sesong: "Sommer",
           temperatur: "varmrett",
-          image: "3_000000000041.jpg",
+          image: "3_000000000041-min.jpg",
           phrase: "Luksuslunsj eller en supergod og sunn middag? ",
           anbefaling:
             "Den grove konsistensen samt den rene og naturlige smaken smaken passer ypperlig sammen med rødløken og ruccolaen. ",
@@ -146,7 +146,7 @@ export default {
     {
       name: "Kjottboller",
       slug: "kjottboller-oppskrift",
-      image: "9_000000000033.jpg",
+      image: "9_000000000033-min.jpg",
       sesong: ["Vinter", "Alle", "Varmretter"],
 
       oppskriftinfo: [
@@ -155,7 +155,7 @@ export default {
           name: "Kjottboller",
 
           temperatur: "kaldrett",
-          image: "9_000000000033.jpg",
+          image: "9_000000000033-min.jpg",
           phrase: "Luksuslunsj eller en supergod og sunn middag? ",
           anbefaling:
             "Den grove konsistensen samt den rene og naturlige smaken smaken passer ypperlig sammen med rødløken og ruccolaen. ",
@@ -166,7 +166,7 @@ export default {
     {
       name: "Kjottfarse",
       slug: "kjottfarse-oppskrift",
-      image: "9_000000000033.jpg",
+      image: "9_000000000033-min.jpg",
       sesong: ["Vinter", "Alle", "Kaldretter"],
 
       oppskriftinfo: [
@@ -175,7 +175,7 @@ export default {
           name: "Kjottfarse",
 
           temperatur: "kaldrett",
-          image: "9_000000000033.jpg",
+          image: "9_000000000033-min.jpg",
           phrase: "Luksuslunsj eller en supergod og sunn middag? ",
           anbefaling:
             "Den grove konsistensen samt den rene og naturlige smaken smaken passer ypperlig sammen med rødløken og ruccolaen. ",

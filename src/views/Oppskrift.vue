@@ -10,7 +10,7 @@
     >
       <div class="opps-img">
         <div class="oppskrift-img">
-          <img :src="require(`@/assets/${info.image}`)" />
+          <img :src="require(`@/assets/jpg/${info.image}`)" />
         </div>
         <div class="ingredienser">
           <div>
@@ -91,7 +91,7 @@
         >
           <img
             class="lazyload"
-            :data-src="require(`@/assets/${produkt.image}`)"
+            :data-src="require(`@/assets/jpg/${produkt.image}`)"
             alt="lettrøkt hvalkjøtt"
           />
           <span>{{ produkt.name }}</span>

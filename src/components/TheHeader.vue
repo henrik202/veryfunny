@@ -5,7 +5,7 @@
       <div class="header-logo">
         <router-link class="logo-link" to="/">
           <img
-            src="~@/assets/Lofothval_sort.png"
+            src="~@/assets/png/Lofothval_sort-min.png"
             alt="lofothval logo"
             id="lfw-logo"
           />

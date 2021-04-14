@@ -28,7 +28,7 @@
           >
             <img
               class="lazyload"
-              :data-src="require(`@/assets/${oppskrift.image}`)"
+              :data-src="require(`@/assets/jpg/${oppskrift.image}`)"
             />
             <!-- <span>{{ oppskrift.sesong }}</span> -->
             <span>{{ oppskrift.name }}</span>
