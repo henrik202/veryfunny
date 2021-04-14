@@ -26,7 +26,10 @@
               params: { slug: oppskrift.slug },
             }"
           >
-            <img :src="require(`@/assets/${oppskrift.image}`)" />
+            <img
+              class="lazyload"
+              :data-src="require(`@/assets/${oppskrift.image}`)"
+            />
             <!-- <span>{{ oppskrift.sesong }}</span> -->
             <span>{{ oppskrift.name }}</span>
           </router-link>

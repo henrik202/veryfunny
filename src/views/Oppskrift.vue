@@ -90,7 +90,8 @@
           }"
         >
           <img
-            :src="require(`@/assets/${produkt.image}`)"
+            class="lazyload"
+            :data-src="require(`@/assets/${produkt.image}`)"
             alt="lettrøkt hvalkjøtt"
           />
           <span>{{ produkt.name }}</span>

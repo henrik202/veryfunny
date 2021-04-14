@@ -83,7 +83,8 @@
             :key="produkt.name"
           >
             <img
-              :src="require(`@/assets/${produkt.image}`)"
+            class="lazyload"
+              :data-src="require(`@/assets/${produkt.image}`)"
               alt="lettrøkt hvalkjøtt"
             />
             <span>{{ produkt.name }}</span>
@@ -100,6 +101,7 @@
             :to="{ name: 'Spesial', params: { slug: spesialitet.slug } }"
           >
             <img
+            
               :src="require(`@/assets/${spesialitet.image}`)"
               alt="lettrøkt hvalkjøtt"
             />
@@ -118,7 +120,7 @@
         <picture>
           <source media="(min-width:1040px)" srcset="@/assets/webP/pexels-valeria-boltneva-1639557-w33.webp, @/assets/MozJpeg/pexels-valeria-boltneva-1639557-w33.jpg">
           <source media="(min-width: 320px)" srcset="@/assets/webP/pexels-valeria-boltneva-1639557-w25.webp, @/assets/MozJpeg/pexels-valeria-boltneva-1639557-w25.jpg">
-          <img src="@/assets/MozJpeg/pexels-valeria-boltneva-1639557-w25.jpg" alt="delicious recipe" class="recipe-img">
+          <img data-src="@/assets/MozJpeg/pexels-valeria-boltneva-1639557-w25.jpg" alt="delicious recipe" class="recipe-img lazyload">
         </picture>
         <div class="whitebox">
           <div class="oppskrifter-text">
